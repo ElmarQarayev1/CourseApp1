@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{7707CD6E-0247-4C43-89A2-AEAB5F8DA4B8}|https">
+  <MonoDevelop.Ide.ItemProperties.Course.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Course.Api/Controllers/StudentsController.cs">
+    <Files>
+      <File FileName="Course.Api/Program.cs" />
+      <File FileName="Course.Api/appsettings.json" />
+      <File FileName="Course.Core/Entities/Group.cs" />
+      <File FileName="Course.Core/Entities/BaseEntity.cs" />
+      <File FileName="Course.Core/Entities/AuditEntity.cs" />
+      <File FileName="Course.Core/Entities/Student.cs" />
+      <File FileName="Course.Data/Configurations/GroupConfiguration.cs" />
+      <File FileName="Course.Data/Configurations/StudentConfiguration.cs" />
+      <File FileName="Course.Data/AppDbContext.cs" />
+      <File FileName="Course.Service/Dtos/GroupDtos/GroupCreateDto.cs" />
+      <File FileName="Course.Service/Dtos/GroupDtos/GroupDetailsDto.cs" />
+      <File FileName="Course.Service/Dtos/GroupDtos/GroupGetDto.cs" />
+      <File FileName="Course.Service/Dtos/GroupDtos/GroupUpdateDto.cs" />
+      <File FileName="Course.Service/Interfaces/IGroupService.cs" />
+      <File FileName="Course.Service/Exceptions/DublicateEntityException.cs" />
+      <File FileName="Course.Service/Exceptions/EntityNotFoundException.cs" />
+      <File FileName="Course.Api/Controllers/StudentsController.cs" Line="22" Column="23" />
+      <File FileName="Course.Api/Controllers/GroupsController.cs" />
+      <File FileName="Course.Service/Implementations/GroupService.cs" />
+      <File FileName="Course.Service/Interfaces/IStudentService.cs" />
+      <File FileName="Course.Service/Implementations/StudentService.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CourseApp" expanded="True" selected="True">
+            <Node name="Course.Api">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="Course.Data">
+              <Node name="Configurations" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
