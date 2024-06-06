@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "ASj0VO/4hji4p9+vcH5t9uKQa/fyCgsJlsZ2D8tXp5zDYAw1oIGrgDnq63fi/r6w2xarsU6gF6EvuBFbdtP0dw==",
+  "dgSpecHash": "t3nF54hj7Eq7JupnGo8T+F3ltvf/ACxg67rvBioRQUjx2NkHV3bweXhd2mY0//QVaRDAy/ki3gBrlHiqnpyfkg==",
   "success": true,
   "projectFilePath": "/Users/elmar/Desktop/CodeAcademy/API/CourseApi1/CourseApp/Course.Data/Course.Data.csproj",
   "expectedPackageFiles": [
     "/Users/elmar/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/elmar/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
     "/Users/elmar/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "/Users/elmar/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/elmar/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/elmar/.nuget/packages/microsoft.data.sqlclient/5.1.4/microsoft.data.sqlclient.5.1.4.nupkg.sha512",

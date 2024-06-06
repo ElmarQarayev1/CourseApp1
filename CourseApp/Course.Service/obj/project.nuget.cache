@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S1VYxLTyfXRpFCbP2Vn73iFo4sWYNt5RWfX02GfTst6nX5d2Iq1ytLnlJscXAkiAEvtmpxdDc5p5ZZ8iqv4voQ==",
+  "dgSpecHash": "qegMAEqynEqJZVye4U75a4Rufhn0y6CjYhGzAB/esxGWt1Gq+4iWB2E6LzLNbfQxsWHMMKAxNG2XuFcrJkYjdQ==",
   "success": true,
   "projectFilePath": "/Users/elmar/Desktop/CodeAcademy/API/CourseApi1/CourseApp/Course.Service/Course.Service.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "/Users/elmar/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
     "/Users/elmar/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/Users/elmar/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "/Users/elmar/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/elmar/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/elmar/.nuget/packages/microsoft.data.sqlclient/5.1.4/microsoft.data.sqlclient.5.1.4.nupkg.sha512",

@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "+T5/4+xdjOeJk1z8TYguZULNHdE71GSxrGu3UUt4VOLNE1iU8Gkc2eBKzAch87OzBNzAAVcSeCF9AuZLtoDTRw==",
+  "dgSpecHash": "YppCkb5mCn/kVRTPbkpRmHkVrorvzVUwssh9aZllGlbWs0V7vV2Fs7RDNNPc94+wsQFbB+ql7aI0r84ilhQdaQ==",
   "success": true,
   "projectFilePath": "/Users/elmar/Desktop/CodeAcademy/API/CourseApi1/CourseApp/Course.Core/Course.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/elmar/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/microsoft.extensions.primitives/2.2.0/microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/system.memory/4.5.1/system.memory.4.5.1.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.1/system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "/Users/elmar/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

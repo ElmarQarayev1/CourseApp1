@@ -1,9 +1,11 @@
 ﻿using System;
 using Course.Core.Entities;
+using Course.Core.Helpers;
 using Course.Data;
 using Course.Service.Dtos.GroupDtos;
 using Course.Service.Exceptions;
 using Course.Service.Interfaces;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 namespace Course.Service.Implementations
@@ -11,10 +13,12 @@ namespace Course.Service.Implementations
     public class GroupService : IGroupService
     {
         private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _env;
 
-        public GroupService(AppDbContext context)
+        public GroupService(AppDbContext context, IWebHostEnvironment env )
         {
             _context = context;
+            _env = env;
         }
         public int Create(GroupCreateDto dto)
         {
@@ -24,9 +28,13 @@ namespace Course.Service.Implementations
             Group entity = new Group
             {
                 No = dto.No,
-                Limit=dto.Limit
-
+                Limit = dto.Limit
             };
+            if (dto.ImageFile != null)
+            {
+                var savedFilePath = FileManager.Save(dto.ImageFile, _env.WebRootPath, "uploads/group");
+                entity.Img = savedFilePath;
+            }
             _context.Groups.Add(entity);
             _context.SaveChanges();
             return entity.Id;
