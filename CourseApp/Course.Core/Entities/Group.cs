@@ -7,7 +7,7 @@ namespace Course.Core.Entities
 {
 	public class Group:AuditEntity
 	{
-        public string? Img { get; set; }
+       // public string? Img { get; set; }
 
         public string No { get; set; }
 

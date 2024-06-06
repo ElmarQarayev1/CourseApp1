@@ -1,48 +1,57 @@
 ﻿<Properties StartupConfiguration="{7707CD6E-0247-4C43-89A2-AEAB5F8DA4B8}|https">
-  <MonoDevelop.Ide.ItemProperties.Course.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Course.Api/Controllers/StudentsController.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Course.Service/Implementations/GroupService.cs">
     <Files>
-      <File FileName="Course.Api/Program.cs" />
+      <File FileName="Course.Api/Program.cs" Line="14" Column="1" />
       <File FileName="Course.Api/appsettings.json" />
-      <File FileName="Course.Core/Entities/Group.cs" />
-      <File FileName="Course.Core/Entities/BaseEntity.cs" />
+      <File FileName="Course.Core/Entities/Group.cs" Line="22" Column="1" />
+      <File FileName="Course.Core/Entities/BaseEntity.cs" Line="1" Column="1" />
       <File FileName="Course.Core/Entities/AuditEntity.cs" />
       <File FileName="Course.Core/Entities/Student.cs" />
       <File FileName="Course.Data/Configurations/GroupConfiguration.cs" />
       <File FileName="Course.Data/Configurations/StudentConfiguration.cs" />
       <File FileName="Course.Data/AppDbContext.cs" />
-      <File FileName="Course.Service/Dtos/GroupDtos/GroupCreateDto.cs" />
+      <File FileName="Course.Service/Dtos/GroupDtos/GroupCreateDto.cs" Line="34" Column="1" />
       <File FileName="Course.Service/Dtos/GroupDtos/GroupDetailsDto.cs" />
       <File FileName="Course.Service/Dtos/GroupDtos/GroupGetDto.cs" />
       <File FileName="Course.Service/Dtos/GroupDtos/GroupUpdateDto.cs" />
       <File FileName="Course.Service/Interfaces/IGroupService.cs" />
       <File FileName="Course.Service/Exceptions/DublicateEntityException.cs" />
       <File FileName="Course.Service/Exceptions/EntityNotFoundException.cs" />
-      <File FileName="Course.Api/Controllers/StudentsController.cs" Line="22" Column="23" />
-      <File FileName="Course.Api/Controllers/GroupsController.cs" />
-      <File FileName="Course.Service/Implementations/GroupService.cs" />
+      <File FileName="Course.Api/Controllers/StudentsController.cs" Line="65" Column="1" />
+      <File FileName="Course.Api/Controllers/GroupsController.cs" Line="72" Column="1" />
+      <File FileName="Course.Service/Implementations/GroupService.cs" Line="82" Column="1" />
       <File FileName="Course.Service/Interfaces/IStudentService.cs" />
-      <File FileName="Course.Service/Implementations/StudentService.cs" />
+      <File FileName="Course.Service/Implementations/StudentService.cs" Line="141" Column="1" />
+      <File FileName="Course.Core/Helpers/FileManager.cs" />
+      <File FileName="Course.Service/Exceptions/RestException.cs" />
+      <File FileName="Course.Api/Middlewares/ExceptionHandlerMiddleware.cs" Line="36" Column="10" />
+      <File FileName="Course.Service/Dtos/StudentDtos/StudentUpdateDto.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CourseApp" expanded="True" selected="True">
+          <Node name="CourseApp" expanded="True">
             <Node name="Course.Api">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Middlewares" expanded="True" />
             </Node>
-            <Node name="Course.Data">
-              <Node name="Configurations" expanded="True" />
+            <Node name="Course.Service">
+              <Node name="Dtos" expanded="True">
+                <Node name="GroupDtos" expanded="True" />
+              </Node>
+              <Node name="Implementations" expanded="True">
+                <Node name="GroupService.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Course.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

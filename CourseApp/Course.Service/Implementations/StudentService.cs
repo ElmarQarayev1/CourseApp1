@@ -5,6 +5,7 @@ using Course.Service.Interfaces;
 using Course.Service.Dtos.StudentDtos;
 using Course.Service.Exceptions;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace Course.Service.Implementations
 {
@@ -22,13 +23,17 @@ namespace Course.Service.Implementations
             Group group = _context.Groups.Include(x=>x.Students).FirstOrDefault(x => x.Id == createDto.GroupId);
             if (group == null)
             {
-                throw new EntityNotFoundException();
+                throw new RestException(StatusCodes.Status404NotFound, "GroupId", "Group not by Given Id");
             }
 
             if (group.Limit <= group.Students.Count)
             {
-                throw new DublicateEntityException();
+                throw new RestException(StatusCodes.Status400BadRequest, "Group is full!");
+
             }
+
+            if (_context.Students.Any(x => x.Email.ToUpper() == createDto.Email.ToUpper() && !x.IsDeleted))
+                throw new RestException(StatusCodes.Status400BadRequest, "Email", "Student already exists by given Email");
 
             Student student = new Student
             {
@@ -49,7 +54,7 @@ namespace Course.Service.Implementations
             var studentToDelete = _context.Students.Find(id);
             if (studentToDelete == null)
             {
-                throw new EntityNotFoundException();
+                throw new RestException(StatusCodes.Status404NotFound, "Id", "Student not by Given Id");
 
             }
 
@@ -88,7 +93,7 @@ namespace Course.Service.Implementations
                         .FirstOrDefault(s => s.Id == id);
             if (data == null)
             {
-                throw new EntityNotFoundException();
+                throw new RestException(StatusCodes.Status404NotFound, "Id", "Student not by Given Id");
             }
 
             StudentDetailsDto studentDetailsDto = new StudentDetailsDto()
@@ -107,19 +112,19 @@ namespace Course.Service.Implementations
             var existingStudent = _context.Students.Find(id);
             if (existingStudent == null)
             {
-                throw new EntityNotFoundException();
+                throw new RestException(StatusCodes.Status404NotFound, "Id", "Student not by Given Id");
             }
 
             Group group = _context.Groups.Include(x=>x.Students).FirstOrDefault(x => x.Id == studentUpdate.GroupId);
             if (group == null)
             {
-                throw new EntityNotFoundException();
+                throw new RestException(StatusCodes.Status404NotFound, "GroupId", "Group not by Given Id");
             }
 
 
             if (group.Limit <= group.Students.Count)
             {
-                throw new DublicateEntityException();
+                throw new RestException(StatusCodes.Status400BadRequest, "Group is full!");
             }
 
             existingStudent.FullName = studentUpdate.FullName;

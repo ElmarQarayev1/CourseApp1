@@ -12,7 +12,7 @@ namespace Course.Service.Dtos.GroupDtos
 
         public byte Limit { get; set; }
         
-        public IFormFile? ImageFile { get; set; }
+        public IFormFile ImageFile { get; set; }
     }
     public class CourseCreateDtoValidator : AbstractValidator<GroupCreateDto>
     {
@@ -29,6 +29,5 @@ namespace Course.Service.Dtos.GroupDtos
                .WithMessage("File type must be png, jpeg, or jpg");
         }
     }
-
 }
 

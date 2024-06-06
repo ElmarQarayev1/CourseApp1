@@ -61,23 +61,13 @@ namespace Course.Api.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, GroupUpdateDto updateDto)
         {
-            try
-            {
+            
+           
                 _groupService.Update(id, updateDto);
                 return NoContent();
-            }
-            catch (EntityNotFoundException)
-            {
-                return NotFound();
-            }
-            catch (DublicateEntityException)
-            {
-                return Conflict();
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, "An unknown error occurred.");
-            }
+            
+
+
         }
 
 

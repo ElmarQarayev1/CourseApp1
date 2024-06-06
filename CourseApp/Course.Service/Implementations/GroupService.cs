@@ -6,6 +6,7 @@ using Course.Service.Dtos.GroupDtos;
 using Course.Service.Exceptions;
 using Course.Service.Interfaces;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace Course.Service.Implementations
@@ -23,18 +24,18 @@ namespace Course.Service.Implementations
         public int Create(GroupCreateDto dto)
         {
             if (_context.Groups.Any(x => x.No == dto.No))
-                throw new DublicateEntityException();
+                throw new RestException(StatusCodes.Status400BadRequest, "Group is already exists!");
 
             Group entity = new Group
             {
                 No = dto.No,
                 Limit = dto.Limit
             };
-            if (dto.ImageFile != null)
-            {
-                var savedFilePath = FileManager.Save(dto.ImageFile, _env.WebRootPath, "uploads/group");
-                entity.Img = savedFilePath;
-            }
+            //if (dto.ImageFile != null)
+            //{
+            //    var savedFilePath = FileManager.Save(dto.ImageFile, _env.WebRootPath, "uploads/group");
+            //    entity.Img = savedFilePath;
+            //}
             _context.Groups.Add(entity);
             _context.SaveChanges();
             return entity.Id;
@@ -55,7 +56,7 @@ namespace Course.Service.Implementations
                 .FirstOrDefault(x => x.Id == id);
 
             if (group == null)
-                throw new EntityNotFoundException();
+                throw new RestException(StatusCodes.Status404NotFound, "Id", "Group not by Given Id");
 
             return new GroupDetailsDto
             {
@@ -70,10 +71,10 @@ namespace Course.Service.Implementations
             var group = _context.Groups.FirstOrDefault(x => x.Id == id && !x.IsDeleted);  
 
             if (group == null)
-                throw new EntityNotFoundException();
+                throw new RestException(StatusCodes.Status404NotFound, "Id", "Student not by Given Id");
 
-            if (group.No != updateDto.No && _context.Groups.Any(x => x.No == updateDto.No && !x.IsDeleted)) 
-                throw new DublicateEntityException();
+            if (group.No != updateDto.No && _context.Groups.Any(x => x.No == updateDto.No && !x.IsDeleted))
+                throw new RestException(StatusCodes.Status400BadRequest, "Group is already exists!");
 
             group.No = updateDto.No;
             group.Limit = updateDto.Limit;
@@ -88,7 +89,7 @@ namespace Course.Service.Implementations
                 .FirstOrDefault(x => x.Id == id);
 
             if (group == null)
-                throw new EntityNotFoundException();
+                throw new RestException(StatusCodes.Status404NotFound, "Id", "Student not by Given Id");
 
             group.IsDeleted = true;
             _context.Groups.Update(group);

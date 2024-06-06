@@ -22,22 +22,11 @@ namespace Course.Api.Controllers
         [HttpPost("")]
         public ActionResult Create(StudentCreateDto createDto)
         {
-            try
-            {
+            
+           
                 return StatusCode(201, new { id = _studentService.Create(createDto) });
-            }   
-            catch(EntityNotFoundException e)
-            {
-                return NotFound();
-            }
-            catch (DublicateEntityException e)
-            {
-                return Conflict();
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, "Unknown Error!");
-            }
+              
+           
         }
 
         [HttpGet("")]
@@ -67,23 +56,11 @@ namespace Course.Api.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, StudentUpdateDto updateDto)
         {
-            try
-            {
+            
+            
                 _studentService.Update(id, updateDto);
                 return NoContent();
-            }
-            catch (EntityNotFoundException)
-            {
-                return NotFound();
-            }
-            catch (DublicateEntityException)
-            {
-                return Conflict();
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, "An unknown error occurred!");
-            }
+            
         }
 
         [HttpDelete("{id}")]
