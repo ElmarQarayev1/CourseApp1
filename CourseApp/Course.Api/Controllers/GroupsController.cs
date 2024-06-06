@@ -20,18 +20,9 @@ namespace Course.Api.Controllers
         [HttpPost("")]
         public ActionResult Create(GroupCreateDto createDto)
         {
-            try
-            {
+           
                 return StatusCode(201, new { id = _groupService.Create(createDto) });
-            }
-            catch (DublicateEntityException e)
-            {
-                return Conflict();
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, "Unknown Error!!");
-            }
+            
         }
 
         [HttpGet("")]
