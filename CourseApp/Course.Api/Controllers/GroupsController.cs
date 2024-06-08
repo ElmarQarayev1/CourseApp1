@@ -3,6 +3,7 @@ using Course.Service.Dtos.GroupDtos;
 using Course.Service.Exceptions;
 using Course.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace Course.Api.Controllers
 {
@@ -24,12 +25,15 @@ namespace Course.Api.Controllers
                 return StatusCode(201, new { id = _groupService.Create(createDto) });
             
         }
-
         [HttpGet("")]
         public ActionResult<List<GroupGetDto>> GetAll()
         {
-            return Ok(_groupService.GetAll());
+            var result = _groupService.GetAll();
+            Log.Information("All Info =>{@result}", result);
+            return Ok(result);
+           
         }
+
 
         [HttpGet("{id}")]
         public ActionResult<GroupDetailsDto> GetById(int id)
@@ -56,11 +60,8 @@ namespace Course.Api.Controllers
            
                 _groupService.Update(id, updateDto);
                 return NoContent();
-            
-
-
+           
         }
-
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
